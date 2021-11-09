@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+</head>
+<body style="background-image: url(https://wallpaper.dog/large/567037.jpg)" >
+ 
+    <div style="background-color: rgb(253, 205, 115); ">
+        <h2 style="color:black;  text-align:center; font-size: 40px;"><%= title %></h2>
+      </div>
+<div style="margin-left: 20px; margin-right: 20px; font-size: 18px;">
+
+  <a href="/add" class="btn  btn-primary">BACK TO HOME</a><br/><br/>
+  <table class="table table-dark table-striped">
+   
+      <tr>
+        <th>Student_id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Email</th>
+        <th>Marks_1</th>
+        <th>Marks_2</th>
+        <th>Marks_3</th>
+        <th>Marks_4</th>
+        <th>Marks_5</th>
+        <th>Action</th>
+      </tr>
+  
+        <% users.forEach(function(user){ %>
+            <tr>
+                <td><%= user.student_id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.age %></td>
+                <td><%= user.gender %></td>
+                <td><%= user.course %></td>
+                <td><%= user.email %></td>
+                <td><%= user.marks_1 %></td>
+                <td><%= user.marks_2 %></td>
+                <td><%= user.marks_3 %></td>
+                <td><%= user.marks_4 %></td>
+                <td><%= user.marks_5 %></td>
+                <td>
+                    <a href="edit/<%= user.student_id %>" class="btn  btn-primary" style="width: 75px;">Edit</a><br/><br/>
+                    <a href="delete/<%= user.student_id %>" class="btn btn-danger" style="width: 75px;">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+   
+  </table>
+</div>
+ 
+</body>
+</html>

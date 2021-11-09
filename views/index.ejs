@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title><%= title %></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+  
+</head>
+<body style="background-image: url(http://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max;); background-repeat: no-repeat; background-size: cover;">
+  <div style="background-color: rgb(253, 205, 115); ">
+    <h2 style="color:black;  text-align:center; font-size: 40px;"><%= title %></h2>
+  </div>
+  <% if(locals.msg) { %>
+    <div class="alert alert-success" role="alert" style=" text-align:center; font-size: 25px;"><%= msg %></div>
+    <% } %>
+    <div class="container" style="width: 700px;
+   
+    background-color:rgba(3,7,42,255);
+    margin: 20px auto;	
+      position:relative;
+      border-radius: 30px;
+    border: 3px solid rgba(144,210,255,255); ">
+<form method="POST" action="/submit" style="color: white; font-size: 20px;">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" >student_id</label>
+    <input type="input" class="form-control" name="student_id" pattern="[0-9]+" required>
+    
+ 
+  </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="input" class="form-control" name="name" pattern="[a-zA-Z]+" required>
+      
+     
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Age</label>
+        <input type="input" class="form-control" name="age" pattern="[0-9]+" required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Gender</label>
+        <input type="input" class="form-control" name="gender" pattern="[a-zA-Z]+" required>
+        
+       
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" required> Course</label>
+        <input type="input" class="form-control" name="course"  required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text" style="background-color: yellow; color: black;">We'll never share your email with anyone else.</div>
+      </div>
+
+      
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marks 1</label>
+        <input type="input" class="form-control" name="marks_1" pattern="[0-9]+" required>
+        
+      
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" >Marks 2</label>
+        <input type="input" class="form-control"  name="marks_2" pattern="[0-9]+" required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" >Marks 3</label>
+        <input type="input" class="form-control"  name="marks_3" pattern="[0-9]+" required>
+        
+        
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marks 4</label>
+        <input type="input" class="form-control"  name="marks_4" pattern="[0-9]+" required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marks 5</label>
+        <input type="input" class="form-control"  name="marks_5" pattern="[0-9]+" required>
+        
+
+      </div>
+     
+    <button type="submit" class="btn btn-primary" id="submit" style="margin-left: 250px;" >SUBMIT</button>
+    <a href="display" class="btn btn-primary" >DISPLAY</a>
+
+  </form>
+
+  </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title><%= title %></title>
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  
+</head>
+<body  style="background-image: url(https://videohive.img.customer.envatousercontent.com/files/237129637/HDV_341_yellow_and_cyan_ink_splash_on_black_background_4k_590x332.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=c5cd0ddbaf4b404f2ba260e50e0d4368); background-repeat: no-repeat; background-size: cover;"">
+ 
+    <div style="background-color: rgb(253, 205, 115); ">
+        <h2 style="color:black;  text-align:center; font-size: 40px;"><%= title %></h2>
+      </div>
+    <div id="back" class="container"style="width: 700px;
+      background-color:rgb(5 33 19);
+    /* background-color:rgba(3,7,42,255); */
+    margin: 20px auto;	
+      position:relative;
+      border-radius: 30px;
+    border: 3px solid rgba(240 235 220); ">
+<form method="POST" action="/update" style="color: white; font-size: 20px;">
+    <input type="hidden" value="<%= user.student_id %>" name="student_id">
+  <!-- <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" >student_id</label>
+    <input type="input" class="form-control" name="student_id" pattern="[0-9]+"  required>
+    
+ 
+  </div> -->
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="input" class="form-control" name="name" pattern="[a-zA-Z]+"  value="<%= user.name %>" required>
+      
+     
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Age</label>
+        <input type="input" class="form-control" name="age" pattern="[0-9]+"  value="<%= user.age %>" required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Gender</label>
+        <input type="input" class="form-control" name="gender" pattern="[a-zA-Z]+"  value="<%= user.gender %>" required>
+        
+       
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" required> Course</label>
+        <input type="input" class="form-control" name="course"  value="<%= user.course %>"  required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value="<%= user.email %>" required>
+        <div id="emailHelp" class="form-text" style="background-color: yellow; color: black;">We'll never share your email with anyone else.</div>
+      </div>
+
+      
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marks 1</label>
+        <input type="input" class="form-control" name="marks_1" pattern="[0-9]+"  value="<%= user.marks_1 %>" required>
+        
+      
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" >Marks 2</label>
+        <input type="input" class="form-control"  name="marks_2" pattern="[0-9]+" value="<%= user.marks_2 %>" required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" >Marks 3</label>
+        <input type="input" class="form-control"  name="marks_3" pattern="[0-9]+" value="<%= user.marks_3 %>" required>
+        
+        
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marks 4</label>
+        <input type="input" class="form-control"  name="marks_4" pattern="[0-9]+" value="<%= user.marks_4 %>" required>
+        
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Marks 5</label>
+        <input type="input" class="form-control"  name="marks_5" pattern="[0-9]+" value="<%= user.marks_5 %>" required>
+        
+
+      </div>
+   
+    <button type="submit" class="btn btn-primary" id="submit" style="margin-left: 289px;">SUBMIT</button>
+    <!-- <a href="display" class="btn btn-sm btn-danger">DISPLAY</a> -->
+  </form>
+  </div>
+  </body>
+</html>
