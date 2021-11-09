@@ -5,7 +5,7 @@ const bodyParser = require('body-parser'); //It is responsible for parsing the i
 
 
 const app=express();     //The app object is instantiated on creation of the Express server
-const port=8080;
+const port=process.env.PORT||8080;
 
 const con = mysql.createConnection({  //inside this we pass connection details 
     host: 'localhost',         
